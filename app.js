@@ -24,10 +24,10 @@ boxContainer.addEventListener("click", (e) => {
   val = setTimeout(() => {
     // if (queue.length == 7) {
     // console.log("entered!");
-    let cnt = 0;
+    let cnt = queue.length;
     while (queue.length != 0) {
       let ele = boxes[queue.shift()];
-      cnt++;
+      cnt--;
       // console.log(cnt);
       // console.log("sice " + queue.length);
       setTimeout(() => {
@@ -50,3 +50,6 @@ function randColor() {
   }
   return "#" + ans;
 }
+
+let [x, ...y] = [1, 2, 3, 4, 5];
+console.log(y[x]);
